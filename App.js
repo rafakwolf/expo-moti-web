@@ -1,12 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { MotiView } from 'moti';
+import { StyleSheet, Text } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <MotiView style={styles.container}
+      from={{
+        opacity: 0,
+        scale: 0.5,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        type: 'timing',
+      }}
+    >
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
-    </View>
+    </MotiView>
   );
 }
 
